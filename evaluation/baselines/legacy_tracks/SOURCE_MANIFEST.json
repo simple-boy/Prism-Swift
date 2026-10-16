@@ -1,0 +1,13 @@
+{
+  "origin_zip_sha256": "f838f314aab67e03a2a27411a3a9912dd55e566d8c2116eaf9ba27d6c82acc0e",
+  "scope": "Seven source files only; synthetic no-model legacy baseline, not production code.",
+  "sha256": {
+    "app.py": "bc07d99c9b66f61a741c7b7cc374ea601e9333f6893db7d64dde854d8b47edd3",
+    "store.py": "e16416a9e2cb2dd6e424de8ae364241310d2102967fb4a3899ade152fd4e673f",
+    "models.py": "c8ebfa8c319caea4510eb24e0dd5f7a217aeabb53d242e82a0cbf040d3b49176",
+    "coding.py": "12b6942ccf5af3cea6154daecd70370c2f6d201f31b757b40a978bdcb26649d9",
+    "multimodal.py": "33fa65c036cd1f9b2c79cf5ea1fb26eb33ff178a0038b168e8277790af8d8394",
+    "memory_core.py": "e2dcb79212faf63ef7eec3ce21664b761261f2a147fb26eb8bb150c4dd1a1b3f",
+    "records.py": "51ae4054dcc8753f7e4ef264524faaab9706cb1748c24d8218d7f12eeec7e1cb"
+  }
+}

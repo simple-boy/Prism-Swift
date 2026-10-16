@@ -1,0 +1,20 @@
+services:
+  memory:
+    container_name: prism-swift-visual
+    image: prism-swift:visual-0.1.0
+    build:
+      dockerfile: Dockerfile.visual
+      args:
+        SWIFT_BASE: prism-swift:0.1.0
+    environment:
+      VISUAL_RERANKER: tinyclip
+      RERANKER_MODEL_PATH: /app/models/tinyclip
+      RERANKER_CANDIDATES: "32"
+      RERANKER_THREADS: "2"
+    volumes:
+      - swift_visual_data:/app/data
+      - ${TINYCLIP_MODEL_DIR:-./models/tinyclip}:/app/models/tinyclip:ro
+    mem_limit: 2304m
+volumes:
+  swift_visual_data:
+    name: prism_swift_visual_data

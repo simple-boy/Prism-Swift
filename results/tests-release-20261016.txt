@@ -1,0 +1,188 @@
+test_exception_redaction_cleanup_and_recovery (test_api.AdmissionTests.test_exception_redaction_cleanup_and_recovery) ... Executing <Task pending name='Task-2' coro=<AdmissionTests.test_exception_redaction_cleanup_and_recovery() running at /mnt/d/Workspace/code/6w/Prism-Swift/tests/test_api.py:272> wait_for=<Future pending cb=[Task.task_wakeup()] created at /root/anaconda3/envs/aml/lib/python3.11/asyncio/base_events.py:427> cb=[_run_until_complete_cb() at /root/anaconda3/envs/aml/lib/python3.11/asyncio/base_events.py:180] created at /root/anaconda3/envs/aml/lib/python3.11/asyncio/runners.py:100> took 0.370 seconds
+{"event":"request_completed","operation_id":"cfbe228874724b599bca2cc1cd40fa3c","operation":"add","status":500,"reason":"internal_error","elapsed_ms":375.409,"request_bytes":173}
+{"event":"request_completed","operation_id":"1674c370cb1640bcbc923494d8f869c6","operation":"add","status":200,"reason":"ok","elapsed_ms":9.418,"request_bytes":173}
+ok
+test_response_body_limit_is_explicit_no_silent_truncation (test_api.AdmissionTests.test_response_body_limit_is_explicit_no_silent_truncation) ... {"event":"request_completed","operation_id":"d0422d3e1039490a8683ccd0780df209","operation":"search","status":503,"reason":"response_body_limit","elapsed_ms":10.259,"request_bytes":37}
+ok
+test_storage_unavailable_returns_retryable_safe_error (test_api.AdmissionTests.test_storage_unavailable_returns_retryable_safe_error) ... {"event":"request_completed","operation_id":"8cdeba542d9a4f16a3f59aa1eea96e0e","operation":"add","status":503,"reason":"storage_unavailable","elapsed_ms":9.348,"request_bytes":173}
+ok
+test_true_concurrency_429_retry_after_and_search_independent (test_api.AdmissionTests.test_true_concurrency_429_retry_after_and_search_independent) ... {"event": "request_rejected", "operation_id": "e17665de8a43469bab923ac4160ad848", "operation": "add", "status": 429, "reason": "concurrency_limit"}
+{"event":"request_completed","operation_id":"e6dde79a2c1540358096cbd178f38b69","operation":"search","status":200,"reason":"ok","elapsed_ms":9.213,"request_bytes":37}
+{"event":"request_completed","operation_id":"ef19f823aa9e48729c96e419ce1e7e41","operation":"add","status":200,"reason":"ok","elapsed_ms":34.35,"request_bytes":173}
+{"event":"request_completed","operation_id":"e1c2ad3c051a4a1dbde81378d49f1b12","operation":"add","status":200,"reason":"ok","elapsed_ms":8.035,"request_bytes":169}
+ok
+test_add_ack_and_immediate_cross_session_search (test_api.ApiTests.test_add_ack_and_immediate_cross_session_search) ... Executing <Task finished name='Task-30' coro=<ApiTests.asyncSetUp() done, defined at /mnt/d/Workspace/code/6w/Prism-Swift/tests/test_api.py:39> result=None created at /root/anaconda3/envs/aml/lib/python3.11/asyncio/runners.py:100> took 1.319 seconds
+{"event":"request_completed","operation_id":"5a5c7f0949fb42229993792a490e4bee","operation":"add","status":200,"reason":"ok","elapsed_ms":80.203,"request_bytes":173}
+{"event":"request_completed","operation_id":"f86bba22dd0f49938fa599e10947f9e4","operation":"search","status":200,"reason":"ok","elapsed_ms":9.548,"request_bytes":58}
+{"event":"request_completed","operation_id":"b218221e8473450ea025c19ab469715c","operation":"add","status":200,"reason":"ok","elapsed_ms":84.87,"request_bytes":164}
+{"event":"request_completed","operation_id":"62f5f87d5da44f60bf0181e003c51f8a","operation":"search","status":200,"reason":"ok","elapsed_ms":9.367,"request_bytes":49}
+Executing <Task finished name='Task-36' coro=<ApiTests.asyncTearDown() done, defined at /mnt/d/Workspace/code/6w/Prism-Swift/tests/test_api.py:48> result=None created at /root/anaconda3/envs/aml/lib/python3.11/asyncio/runners.py:100> took 0.153 seconds
+ok
+test_all_three_authentication_schemes_and_unauthorized_body (test_api.ApiTests.test_all_three_authentication_schemes_and_unauthorized_body) ... Executing <Task finished name='Task-39' coro=<ApiTests.asyncSetUp() done, defined at /mnt/d/Workspace/code/6w/Prism-Swift/tests/test_api.py:39> result=None created at /root/anaconda3/envs/aml/lib/python3.11/asyncio/runners.py:100> took 1.287 seconds
+{"event": "request_rejected", "operation_id": "4ee01dad0c0a4560a56501fdf0821a58", "operation": "add", "status": 401, "reason": "unauthorized"}
+{"event":"request_completed","operation_id":"f057b2f0ba2845128d7334cf9aa1f2f0","operation":"search","status":200,"reason":"ok","elapsed_ms":9.618,"request_bytes":48}
+{"event":"request_completed","operation_id":"82ac9a2ad13641fabac6fc0395d86a5b","operation":"search","status":200,"reason":"ok","elapsed_ms":8.925,"request_bytes":48}
+{"event":"request_completed","operation_id":"70b830826f484320a25a1f10b62c0da2","operation":"search","status":200,"reason":"ok","elapsed_ms":10.024,"request_bytes":48}
+{"event": "request_rejected", "operation_id": "ef69e233455343b1886ed1dae3ea16d9", "operation": "add", "status": 401, "reason": "unauthorized"}
+Executing <Task finished name='Task-44' coro=<ApiTests.asyncTearDown() done, defined at /mnt/d/Workspace/code/6w/Prism-Swift/tests/test_api.py:48> result=None created at /root/anaconda3/envs/aml/lib/python3.11/asyncio/runners.py:100> took 0.148 seconds
+ok
+test_declared_and_streaming_body_limit_and_slots_recovery (test_api.ApiTests.test_declared_and_streaming_body_limit_and_slots_recovery) ... Executing <Task finished name='Task-47' coro=<ApiTests.asyncSetUp() done, defined at /mnt/d/Workspace/code/6w/Prism-Swift/tests/test_api.py:39> result=None created at /root/anaconda3/envs/aml/lib/python3.11/asyncio/runners.py:100> took 1.295 seconds
+{"event":"request_completed","operation_id":"fd25e94477cd4f0386c7902c17ad13da","operation":"add","status":413,"reason":"request_body_too_large","elapsed_ms":0.09,"request_bytes":0}
+{"event":"request_completed","operation_id":"af5eba0b2b274f16a7d7f31cbb24ecae","operation":"add","status":413,"reason":"request_body_too_large","elapsed_ms":6.726,"request_bytes":0}
+{"event":"request_completed","operation_id":"c5453935dad647ab8aa410a1e5d97007","operation":"search","status":200,"reason":"ok","elapsed_ms":9.682,"request_bytes":40}
+Executing <Task finished name='Task-52' coro=<ApiTests.asyncTearDown() done, defined at /mnt/d/Workspace/code/6w/Prism-Swift/tests/test_api.py:48> result=None created at /root/anaconda3/envs/aml/lib/python3.11/asyncio/runners.py:100> took 0.160 seconds
+ok
+test_health_is_unauthenticated_safe_and_not_official_readiness (test_api.ApiTests.test_health_is_unauthenticated_safe_and_not_official_readiness) ... Executing <Task finished name='Task-57' coro=<ApiTests.asyncSetUp() done, defined at /mnt/d/Workspace/code/6w/Prism-Swift/tests/test_api.py:39> result=None created at /root/anaconda3/envs/aml/lib/python3.11/asyncio/runners.py:100> took 1.347 seconds
+Executing <Task finished name='Task-59' coro=<ApiTests.asyncTearDown() done, defined at /mnt/d/Workspace/code/6w/Prism-Swift/tests/test_api.py:48> result=None created at /root/anaconda3/envs/aml/lib/python3.11/asyncio/runners.py:100> took 0.149 seconds
+ok
+test_idempotent_receipt_and_conflicting_reuse (test_api.ApiTests.test_idempotent_receipt_and_conflicting_reuse) ... Executing <Task finished name='Task-62' coro=<ApiTests.asyncSetUp() done, defined at /mnt/d/Workspace/code/6w/Prism-Swift/tests/test_api.py:39> result=None created at /root/anaconda3/envs/aml/lib/python3.11/asyncio/runners.py:100> took 1.411 seconds
+{"event":"request_completed","operation_id":"94037a2b8bb648948edf221d209093e8","operation":"add","status":200,"reason":"ok","elapsed_ms":105.218,"request_bytes":173}
+{"event":"request_completed","operation_id":"62cab2158a97480b869306b5093e9ef3","operation":"add","status":200,"reason":"ok","elapsed_ms":9.08,"request_bytes":173}
+{"event":"request_completed","operation_id":"3ab187b1446b4276a9252c90084c8ef9","operation":"add","status":409,"reason":"request_id_reused_with_changed_payload","elapsed_ms":8.142,"request_bytes":159}
+{"event":"request_completed","operation_id":"71cb74d3ae4f4dd08dadc46865c82606","operation":"search","status":200,"reason":"ok","elapsed_ms":8.403,"request_bytes":51}
+Executing <Task finished name='Task-68' coro=<ApiTests.asyncTearDown() done, defined at /mnt/d/Workspace/code/6w/Prism-Swift/tests/test_api.py:48> result=None created at /root/anaconda3/envs/aml/lib/python3.11/asyncio/runners.py:100> took 0.159 seconds
+ok
+test_image_pixel_and_decoded_capacity_errors (test_api.ApiTests.test_image_pixel_and_decoded_capacity_errors) ... Executing <Task finished name='Task-71' coro=<ApiTests.asyncSetUp() done, defined at /mnt/d/Workspace/code/6w/Prism-Swift/tests/test_api.py:39> result=None created at /root/anaconda3/envs/aml/lib/python3.11/asyncio/runners.py:100> took 1.444 seconds
+Executing <Task pending name='Task-72' coro=<ApiTests.test_image_pixel_and_decoded_capacity_errors() running at /mnt/d/Workspace/code/6w/Prism-Swift/tests/test_api.py:169> wait_for=<Future pending cb=[Task.task_wakeup()] created at /root/anaconda3/envs/aml/lib/python3.11/asyncio/base_events.py:427> cb=[_run_until_complete_cb() at /root/anaconda3/envs/aml/lib/python3.11/asyncio/base_events.py:180] created at /root/anaconda3/envs/aml/lib/python3.11/asyncio/runners.py:100> took 0.171 seconds
+{"event":"request_completed","operation_id":"412df097065d415bbed0c98a0ca9adf1","operation":"add","status":413,"reason":"image_pixels_exceed_declared_capacity","elapsed_ms":11.308,"request_bytes":339}
+Executing <Task finished name='Task-74' coro=<ApiTests.asyncTearDown() done, defined at /mnt/d/Workspace/code/6w/Prism-Swift/tests/test_api.py:48> result=None created at /root/anaconda3/envs/aml/lib/python3.11/asyncio/runners.py:100> took 0.163 seconds
+ok
+test_malformed_json_nonfinite_duplicate_keys_and_media (test_api.ApiTests.test_malformed_json_nonfinite_duplicate_keys_and_media) ... Executing <Task finished name='Task-77' coro=<ApiTests.asyncSetUp() done, defined at /mnt/d/Workspace/code/6w/Prism-Swift/tests/test_api.py:39> result=None created at /root/anaconda3/envs/aml/lib/python3.11/asyncio/runners.py:100> took 1.368 seconds
+{"event":"request_completed","operation_id":"cb08b8a38ceb465b883899a2db2ce6bc","operation":"add","status":400,"reason":"invalid_json","elapsed_ms":6.198,"request_bytes":0}
+{"event":"request_completed","operation_id":"95b2e9d0ad464e27bc4900f446f28d22","operation":"add","status":400,"reason":"invalid_json","elapsed_ms":5.534,"request_bytes":0}
+{"event":"request_completed","operation_id":"f9ef0bb7e88c4c2e9f4171bbc54bf549","operation":"add","status":400,"reason":"invalid_json","elapsed_ms":6.224,"request_bytes":0}
+{"event":"request_completed","operation_id":"3d5b59bf22d848b09dc1ef8edf691ea6","operation":"add","status":400,"reason":"invalid_json","elapsed_ms":5.548,"request_bytes":0}
+{"event":"request_completed","operation_id":"1b26be755aef4c18899b47710aa73a78","operation":"add","status":422,"reason":"json_object_required","elapsed_ms":5.719,"request_bytes":0}
+{"event":"request_completed","operation_id":"c542d7030b814967b702f5833fc38be6","operation":"add","status":415,"reason":"content_type_must_be_application_json","elapsed_ms":0.049,"request_bytes":0}
+{"event":"request_completed","operation_id":"36ab93a39e7d422dbf49b4229f83e339","operation":"add","status":422,"reason":"only_inline_jpeg_png_webp_base64_supported","elapsed_ms":9.289,"request_bytes":210}
+{"event":"request_completed","operation_id":"10d83d20ee604871ba058679a31d5b8a","operation":"add","status":422,"reason":"invalid_or_unsafe_image","elapsed_ms":299.258,"request_bytes":207}
+{"event":"request_completed","operation_id":"4b0d43f8a5f043d39187447894fcdbfa","operation":"add","status":422,"reason":"only_inline_jpeg_png_webp_base64_supported","elapsed_ms":9.322,"request_bytes":207}
+{"event":"request_completed","operation_id":"6d76b42d61f74f929683df6f92b5ba2b","operation":"add","status":422,"reason":"invalid_unicode","elapsed_ms":7.607,"request_bytes":105}
+Executing <Task finished name='Task-88' coro=<ApiTests.asyncTearDown() done, defined at /mnt/d/Workspace/code/6w/Prism-Swift/tests/test_api.py:48> result=None created at /root/anaconda3/envs/aml/lib/python3.11/asyncio/runners.py:100> took 0.172 seconds
+ok
+test_ordered_multimodal_round_trip_and_image_query (test_api.ApiTests.test_ordered_multimodal_round_trip_and_image_query) ... Executing <Task finished name='Task-91' coro=<ApiTests.asyncSetUp() done, defined at /mnt/d/Workspace/code/6w/Prism-Swift/tests/test_api.py:39> result=None created at /root/anaconda3/envs/aml/lib/python3.11/asyncio/runners.py:100> took 1.226 seconds
+{"event":"request_completed","operation_id":"7b6d9a5c88364055963061e13512a58c","operation":"add","status":200,"reason":"ok","elapsed_ms":86.149,"request_bytes":420}
+{"event":"request_completed","operation_id":"7216e6cd3e0f4bf2bc876c5b889b9ef9","operation":"search","status":200,"reason":"ok","elapsed_ms":10.538,"request_bytes":244}
+{"event":"request_completed","operation_id":"8832e67b6ca9419093f798e69e9c7222","operation":"add","status":200,"reason":"ok","elapsed_ms":106.087,"request_bytes":1148}
+{"event":"request_completed","operation_id":"c21ee9b9994b4fbd93ac5bb03920c457","operation":"search","status":200,"reason":"ok","elapsed_ms":8.865,"request_bytes":970}
+{"event":"request_completed","operation_id":"8d299dd2eb8c4a69afa8aa1d55164957","operation":"add","status":200,"reason":"ok","elapsed_ms":67.531,"request_bytes":408}
+{"event":"request_completed","operation_id":"e9d4a01d7ef645c78ba50d6570ebb366","operation":"search","status":200,"reason":"ok","elapsed_ms":9.307,"request_bytes":230}
+Executing <Task finished name='Task-99' coro=<ApiTests.asyncTearDown() done, defined at /mnt/d/Workspace/code/6w/Prism-Swift/tests/test_api.py:48> result=None created at /root/anaconda3/envs/aml/lib/python3.11/asyncio/runners.py:100> took 0.109 seconds
+ok
+test_read_timeout_releases_admission_capacity (test_api.ApiTests.test_read_timeout_releases_admission_capacity) ... Executing <Task finished name='Task-102' coro=<ApiTests.asyncSetUp() done, defined at /mnt/d/Workspace/code/6w/Prism-Swift/tests/test_api.py:39> result=None created at /root/anaconda3/envs/aml/lib/python3.11/asyncio/runners.py:100> took 1.272 seconds
+{"event":"request_completed","operation_id":"29a888ed454648a3a7b786d6590eafa9","operation":"add","status":408,"reason":"request_read_timeout","elapsed_ms":1007.899,"request_bytes":0}
+{"event":"request_completed","operation_id":"b91a6681fabf42e68df4ebc72e7ae301","operation":"add","status":200,"reason":"ok","elapsed_ms":82.689,"request_bytes":173}
+Executing <Task finished name='Task-106' coro=<ApiTests.asyncTearDown() done, defined at /mnt/d/Workspace/code/6w/Prism-Swift/tests/test_api.py:48> result=None created at /root/anaconda3/envs/aml/lib/python3.11/asyncio/runners.py:100> took 0.122 seconds
+ok
+test_repeated_serial_requests_never_hit_admission_race (test_api.ApiTests.test_repeated_serial_requests_never_hit_admission_race) ... Executing <Task finished name='Task-110' coro=<ApiTests.asyncSetUp() done, defined at /mnt/d/Workspace/code/6w/Prism-Swift/tests/test_api.py:39> result=None created at /root/anaconda3/envs/aml/lib/python3.11/asyncio/runners.py:100> took 1.324 seconds
+{"event":"request_completed","operation_id":"5a77f6e3f82340fe84be0c30d5af5c12","operation":"add","status":200,"reason":"ok","elapsed_ms":74.084,"request_bytes":172}
+{"event":"request_completed","operation_id":"77cabfd0f7f141889804d2b643025f2d","operation":"search","status":200,"reason":"ok","elapsed_ms":9.044,"request_bytes":49}
+{"event":"request_completed","operation_id":"58b5379c6f7841c2a84398544d36609a","operation":"add","status":200,"reason":"ok","elapsed_ms":76.631,"request_bytes":172}
+{"event":"request_completed","operation_id":"e17ef82d8cde48159dff68dc0059282a","operation":"search","status":200,"reason":"ok","elapsed_ms":9.667,"request_bytes":49}
+{"event":"request_completed","operation_id":"8da868793dad4fd08413dbe69265bb73","operation":"add","status":200,"reason":"ok","elapsed_ms":76.472,"request_bytes":172}
+{"event":"request_completed","operation_id":"279f34ad057b48e1bf9250599c10d379","operation":"search","status":200,"reason":"ok","elapsed_ms":8.035,"request_bytes":49}
+{"event":"request_completed","operation_id":"323e7fd20b2b4012897324af71028432","operation":"add","status":200,"reason":"ok","elapsed_ms":78.624,"request_bytes":172}
+{"event":"request_completed","operation_id":"883bedc1e8664803abe0ba2137f09de7","operation":"search","status":200,"reason":"ok","elapsed_ms":10.202,"request_bytes":49}
+{"event":"request_completed","operation_id":"d9fd02abf11047f59f3b368394a46342","operation":"add","status":200,"reason":"ok","elapsed_ms":224.184,"request_bytes":172}
+{"event":"request_completed","operation_id":"e1e16142455a49fdbf9692a19e0ef777","operation":"search","status":200,"reason":"ok","elapsed_ms":8.532,"request_bytes":49}
+{"event":"request_completed","operation_id":"c3723b69b3e54b9093106801b4cdefa2","operation":"add","status":200,"reason":"ok","elapsed_ms":76.622,"request_bytes":172}
+{"event":"request_completed","operation_id":"84d9068c5e8c448087ecac7fddd3acc5","operation":"search","status":200,"reason":"ok","elapsed_ms":10.046,"request_bytes":49}
+{"event":"request_completed","operation_id":"2f5f7f5a0b1146369132e2aa91c07d2d","operation":"add","status":200,"reason":"ok","elapsed_ms":93.535,"request_bytes":172}
+{"event":"request_completed","operation_id":"16cdc772918b4715b0f224e0b9873c24","operation":"search","status":200,"reason":"ok","elapsed_ms":8.831,"request_bytes":49}
+{"event":"request_completed","operation_id":"0b08fb75ac1c4817aaad32e750f9f7d3","operation":"add","status":200,"reason":"ok","elapsed_ms":68.512,"request_bytes":172}
+{"event":"request_completed","operation_id":"79cbc95d78a84150a60a2d028032e421","operation":"search","status":200,"reason":"ok","elapsed_ms":8.974,"request_bytes":49}
+{"event":"request_completed","operation_id":"a2a22805c7d94c00a1daf6bf7e006b2d","operation":"add","status":200,"reason":"ok","elapsed_ms":76.926,"request_bytes":172}
+{"event":"request_completed","operation_id":"fc816855e23b4010934b26bee941391e","operation":"search","status":200,"reason":"ok","elapsed_ms":9.918,"request_bytes":49}
+{"event":"request_completed","operation_id":"9c51d2c3c509488cb8c28aa93a8410f9","operation":"add","status":200,"reason":"ok","elapsed_ms":93.398,"request_bytes":172}
+{"event":"request_completed","operation_id":"98d3c32d365d4a5aa248952ccb19fef8","operation":"search","status":200,"reason":"ok","elapsed_ms":9.18,"request_bytes":49}
+{"event":"request_completed","operation_id":"cfc27a3440c740c2a0a3e1a42a1ad289","operation":"add","status":200,"reason":"ok","elapsed_ms":85.231,"request_bytes":173}
+{"event":"request_completed","operation_id":"14dc188357b944ec9832b1d5a8523be7","operation":"search","status":200,"reason":"ok","elapsed_ms":8.293,"request_bytes":49}
+{"event":"request_completed","operation_id":"6f86b976bcdf42c09ebe107f1fd346b5","operation":"add","status":200,"reason":"ok","elapsed_ms":86.223,"request_bytes":173}
+{"event":"request_completed","operation_id":"5c8c64e67311474cb6806445ea1893e9","operation":"search","status":200,"reason":"ok","elapsed_ms":9.247,"request_bytes":49}
+{"event":"request_completed","operation_id":"fa3e4e5ad52841eb9e6ca8282c7c994f","operation":"add","status":200,"reason":"ok","elapsed_ms":69.35,"request_bytes":173}
+{"event":"request_completed","operation_id":"579a4bb7582e49e5bc5a851b91ce77c6","operation":"search","status":200,"reason":"ok","elapsed_ms":9.003,"request_bytes":49}
+{"event":"request_completed","operation_id":"63a56834d9ac416395d31488af690770","operation":"add","status":200,"reason":"ok","elapsed_ms":76.22,"request_bytes":173}
+{"event":"request_completed","operation_id":"a7d41c8109174a7fa29c5dce3710dc7f","operation":"search","status":200,"reason":"ok","elapsed_ms":9.31,"request_bytes":49}
+{"event":"request_completed","operation_id":"f5c6a9d339e14ac4a14d9232f2f79d4c","operation":"add","status":200,"reason":"ok","elapsed_ms":76.946,"request_bytes":173}
+{"event":"request_completed","operation_id":"b75612ad0fc341879449a9c6977ae50d","operation":"search","status":200,"reason":"ok","elapsed_ms":8.634,"request_bytes":49}
+Executing <Task finished name='Task-142' coro=<ApiTests.asyncTearDown() done, defined at /mnt/d/Workspace/code/6w/Prism-Swift/tests/test_api.py:48> result=None created at /root/anaconda3/envs/aml/lib/python3.11/asyncio/runners.py:100> took 0.137 seconds
+ok
+test_restart_reopens_committed_image_and_stable_id (test_api.ApiTests.test_restart_reopens_committed_image_and_stable_id) ... Executing <Task finished name='Task-145' coro=<ApiTests.asyncSetUp() done, defined at /mnt/d/Workspace/code/6w/Prism-Swift/tests/test_api.py:39> result=None created at /root/anaconda3/envs/aml/lib/python3.11/asyncio/runners.py:100> took 1.386 seconds
+{"event":"request_completed","operation_id":"a4a251876ca44404afabb08e86e189d3","operation":"add","status":200,"reason":"ok","elapsed_ms":79.357,"request_bytes":391}
+{"event":"request_completed","operation_id":"16c16b77611143daa2b433406018e587","operation":"search","status":200,"reason":"ok","elapsed_ms":8.87,"request_bytes":49}
+{"event":"request_completed","operation_id":"0147d2607abc48f18269f5a0a8998356","operation":"search","status":200,"reason":"ok","elapsed_ms":8.741,"request_bytes":49}
+Executing <Task finished name='Task-150' coro=<ApiTests.asyncTearDown() done, defined at /mnt/d/Workspace/code/6w/Prism-Swift/tests/test_api.py:48> result=None created at /root/anaconda3/envs/aml/lib/python3.11/asyncio/runners.py:100> took 0.130 seconds
+ok
+test_semantic_validation_rejects_roles_timestamp_ids_and_top_k (test_api.ApiTests.test_semantic_validation_rejects_roles_timestamp_ids_and_top_k) ... Executing <Task finished name='Task-153' coro=<ApiTests.asyncSetUp() done, defined at /mnt/d/Workspace/code/6w/Prism-Swift/tests/test_api.py:39> result=None created at /root/anaconda3/envs/aml/lib/python3.11/asyncio/runners.py:100> took 1.300 seconds
+{"event":"request_completed","operation_id":"76d23012ee044706b8189b4b1e17a454","operation":"add","status":422,"reason":"role_must_be_user_or_assistant","elapsed_ms":8.434,"request_bytes":175}
+{"event":"request_completed","operation_id":"68b9d253d07e40dfac76f29a39819ebb","operation":"add","status":422,"reason":"role_must_be_user_or_assistant","elapsed_ms":9.605,"request_bytes":173}
+{"event":"request_completed","operation_id":"c5b67d53ed654062b48269628b74adec","operation":"add","status":422,"reason":"role_must_be_user_or_assistant","elapsed_ms":9.829,"request_bytes":171}
+{"event":"request_completed","operation_id":"0a2bcc76e76f4562aac8f6e7ea9ece4e","operation":"add","status":422,"reason":"role_must_be_user_or_assistant","elapsed_ms":8.034,"request_bytes":169}
+{"event":"request_completed","operation_id":"0c8d06f282f048f6868184d7e1317cfb","operation":"add","status":422,"reason":"role_must_be_user_or_assistant","elapsed_ms":9.637,"request_bytes":169}
+{"event":"request_completed","operation_id":"3523147bb8a54902b642932439349ebc","operation":"add","status":422,"reason":"timestamp_must_be_unix_milliseconds","elapsed_ms":7.969,"request_bytes":164}
+{"event":"request_completed","operation_id":"4db05bab1c594693856195f4a9c081da","operation":"add","status":422,"reason":"timestamp_must_be_unix_milliseconds","elapsed_ms":8.564,"request_bytes":164}
+{"event":"request_completed","operation_id":"010190380d94469888a5ebd83a9c2c25","operation":"add","status":422,"reason":"timestamp_must_be_unix_milliseconds","elapsed_ms":8.503,"request_bytes":163}
+{"event":"request_completed","operation_id":"0887c6c3cce3456ea0914ffd13188afd","operation":"add","status":422,"reason":"timestamp_must_be_unix_milliseconds","elapsed_ms":8.296,"request_bytes":175}
+{"event":"request_completed","operation_id":"9cba787f916a4284b6a89e9ca1f564fa","operation":"add","status":422,"reason":"timestamp_out_of_range","elapsed_ms":8.424,"request_bytes":191}
+{"event":"request_completed","operation_id":"f5232075e76b477fbc51d61a052512b4","operation":"add","status":422,"reason":"request_id_required","elapsed_ms":7.16,"request_bytes":165}
+{"event":"request_completed","operation_id":"1779e9658fe2460c8b0973eeec3a61a4","operation":"add","status":422,"reason":"user_id_required","elapsed_ms":7.801,"request_bytes":168}
+{"event":"request_completed","operation_id":"aab4e60c04714fe6b08cfb2d04f36c91","operation":"add","status":422,"reason":"session_id_required","elapsed_ms":7.836,"request_bytes":165}
+{"event":"request_completed","operation_id":"5aa59d9c73c6442f966a88ff58a309c6","operation":"search","status":422,"reason":"top_k_must_be_integer_1_to_100","elapsed_ms":7.134,"request_bytes":37}
+{"event":"request_completed","operation_id":"6142e721cfe74d95b0fc08880914e40d","operation":"search","status":422,"reason":"top_k_must_be_integer_1_to_100","elapsed_ms":7.871,"request_bytes":38}
+{"event":"request_completed","operation_id":"b25561d1ffc649f4911c087f3c655be4","operation":"search","status":422,"reason":"top_k_must_be_integer_1_to_100","elapsed_ms":7.348,"request_bytes":39}
+{"event":"request_completed","operation_id":"7426aeb6e557405a90ee460f5ef1208a","operation":"search","status":422,"reason":"top_k_must_be_integer_1_to_100","elapsed_ms":7.956,"request_bytes":40}
+{"event":"request_completed","operation_id":"a71e6a8a70b34471ab7dc603ea565775","operation":"search","status":422,"reason":"top_k_must_be_integer_1_to_100","elapsed_ms":7.678,"request_bytes":39}
+{"event":"request_completed","operation_id":"f001dcf555a944a9b89dca286d6f4e21","operation":"search","status":422,"reason":"top_k_must_be_integer_1_to_100","elapsed_ms":7.396,"request_bytes":39}
+{"event":"request_completed","operation_id":"1c7d72255c374a8195896217a189c35f","operation":"search","status":422,"reason":"options_must_be_nonempty_strings","elapsed_ms":7.565,"request_bytes":52}
+{"event":"request_completed","operation_id":"9c7b567e04fa4fe3a36c6e68ffac763d","operation":"search","status":422,"reason":"options_must_be_nonempty_strings","elapsed_ms":7.208,"request_bytes":50}
+{"event":"request_completed","operation_id":"498bcc3d7091480a81111254ab867152","operation":"search","status":422,"reason":"options_must_be_nonempty_strings","elapsed_ms":7.998,"request_bytes":51}
+{"event":"request_completed","operation_id":"cc4e2f88f6854b418f960c6d3f2c3a3a","operation":"search","status":422,"reason":"options_must_be_nonempty_strings","elapsed_ms":7.399,"request_bytes":49}
+{"event":"request_completed","operation_id":"6fe05a16bc75453d952d2ee8373e0687","operation":"search","status":422,"reason":"options_must_be_nonempty_strings","elapsed_ms":7.617,"request_bytes":52}
+{"event":"request_completed","operation_id":"106d21aefcd944ddaecea1f8a4a7333d","operation":"search","status":422,"reason":"options_must_be_nonempty_strings","elapsed_ms":7.561,"request_bytes":51}
+Executing <Task finished name='Task-180' coro=<ApiTests.asyncTearDown() done, defined at /mnt/d/Workspace/code/6w/Prism-Swift/tests/test_api.py:48> result=None created at /root/anaconda3/envs/aml/lib/python3.11/asyncio/runners.py:100> took 0.132 seconds
+ok
+test_structured_log_has_no_body_identity_or_credentials (test_api.ApiTests.test_structured_log_has_no_body_identity_or_credentials) ... Executing <Task finished name='Task-183' coro=<ApiTests.asyncSetUp() done, defined at /mnt/d/Workspace/code/6w/Prism-Swift/tests/test_api.py:39> result=None created at /root/anaconda3/envs/aml/lib/python3.11/asyncio/runners.py:100> took 1.531 seconds
+ok
+test_user_isolation_and_top_k (test_api.ApiTests.test_user_isolation_and_top_k) ... Executing <Task finished name='Task-189' coro=<ApiTests.asyncSetUp() done, defined at /mnt/d/Workspace/code/6w/Prism-Swift/tests/test_api.py:39> result=None created at /root/anaconda3/envs/aml/lib/python3.11/asyncio/runners.py:100> took 1.290 seconds
+{"event":"request_completed","operation_id":"96736cd3ad5d442d86dd8fc89cb2ccd5","operation":"add","status":200,"reason":"ok","elapsed_ms":81.134,"request_bytes":156}
+{"event":"request_completed","operation_id":"b91398d31fea48dbb506eb8c24394ea1","operation":"add","status":200,"reason":"ok","elapsed_ms":81.352,"request_bytes":156}
+{"event":"request_completed","operation_id":"6bfc9e4991254c81a5d82a80bd99980c","operation":"add","status":200,"reason":"ok","elapsed_ms":81.962,"request_bytes":156}
+{"event":"request_completed","operation_id":"0cddb45b197540cda441ba2711eb3cbe","operation":"add","status":200,"reason":"ok","elapsed_ms":72.61,"request_bytes":156}
+{"event":"request_completed","operation_id":"aa9da01026a4431496059e81e27d9129","operation":"add","status":200,"reason":"ok","elapsed_ms":88.938,"request_bytes":170}
+{"event":"request_completed","operation_id":"81487fc1401a4db8973ab689f9405836","operation":"search","status":200,"reason":"ok","elapsed_ms":9.256,"request_bytes":78}
+{"event":"request_completed","operation_id":"28ea7843b66540a49582fada98816bf0","operation":"search","status":200,"reason":"ok","elapsed_ms":13.044,"request_bytes":56}
+Executing <Task finished name='Task-198' coro=<ApiTests.asyncTearDown() done, defined at /mnt/d/Workspace/code/6w/Prism-Swift/tests/test_api.py:48> result=None created at /root/anaconda3/envs/aml/lib/python3.11/asyncio/runners.py:100> took 0.147 seconds
+ok
+test_environment_limits_and_frozen_validation (test_api.SettingsTests.test_environment_limits_and_frozen_validation) ... ok
+test_production_requires_memory_key_but_no_remote_model_key (test_api.SettingsTests.test_production_requires_memory_key_but_no_remote_model_key) ... ok
+test_add_never_invokes_encoder_and_search_uses_only_scoped_sources (test_reranker.RerankerTests.test_add_never_invokes_encoder_and_search_uses_only_scoped_sources) ... ok
+test_invalid_reranker_output_rolls_back_read_transaction (test_reranker.RerankerTests.test_invalid_reranker_output_rolls_back_read_transaction) ... ok
+test_model_configuration_is_frozen_with_database (test_reranker.RerankerTests.test_model_configuration_is_frozen_with_database) ... ok
+test_nonvisual_query_skips_reranker_and_no_derived_cache_is_written (test_reranker.RerankerTests.test_nonvisual_query_skips_reranker_and_no_derived_cache_is_written) ... ok
+test_reranking_changes_order_preserves_content_and_honors_topk (test_reranker.RerankerTests.test_reranking_changes_order_preserves_content_and_honors_topk) ... ok
+test_visual_routing_recognizes_photograph_plural_and_colour (test_reranker.RerankerTests.test_visual_routing_recognizes_photograph_plural_and_colour) ... ok
+test_acknowledged_data_survives_process_exit_without_graceful_close (test_storage.StorageTests.test_acknowledged_data_survives_process_exit_without_graceful_close) ... ok
+test_all_strategies_reject_truncated_jpeg_and_max_date_does_not_crash (test_storage.StorageTests.test_all_strategies_reject_truncated_jpeg_and_max_date_does_not_crash) ... ok
+test_committed_retry_has_stable_id_and_conflicting_reuse_is_rejected (test_storage.StorageTests.test_committed_retry_has_stable_id_and_conflicting_reuse_is_rejected) ... ok
+test_concurrent_committed_retry_is_single_record (test_storage.StorageTests.test_concurrent_committed_retry_is_single_record) ... ok
+test_concurrent_read_write_returns_complete_evidence (test_storage.StorageTests.test_concurrent_read_write_returns_complete_evidence) ... ok
+test_config_freeze_and_consistent_backup (test_storage.StorageTests.test_config_freeze_and_consistent_backup) ... ok
+test_cross_session_latest_and_entity_relation_sources (test_storage.StorageTests.test_cross_session_latest_and_entity_relation_sources) ... ok
+test_image_formats_corruption_mime_and_pixel_capacity (test_storage.StorageTests.test_image_formats_corruption_mime_and_pixel_capacity) ... ok
+test_image_query_exact_match_and_color_text_query (test_storage.StorageTests.test_image_query_exact_match_and_color_text_query) ... ok
+test_latest_uses_source_time_when_history_arrives_out_of_order (test_storage.StorageTests.test_latest_uses_source_time_when_history_arrives_out_of_order) ... ok
+test_long_text_chinese_and_top_k (test_storage.StorageTests.test_long_text_chinese_and_top_k) ... ok
+test_media_budget_counts_duplicate_occurrences_not_unique_bytes (test_storage.StorageTests.test_media_budget_counts_duplicate_occurrences_not_unique_bytes) ... ok
+test_ordered_original_evidence_and_user_scoped_binary_deduplication (test_storage.StorageTests.test_ordered_original_evidence_and_user_scoped_binary_deduplication) ... ok
+test_ordered_temporal_neighbour_and_source_date_candidates (test_storage.StorageTests.test_ordered_temporal_neighbour_and_source_date_candidates) ... ok
+test_other_user_cannot_change_scoped_bm25_statistics (test_storage.StorageTests.test_other_user_cannot_change_scoped_bm25_statistics) ... ok
+test_process_crash_mid_transaction_cannot_leave_partial_sources (test_storage.StorageTests.test_process_crash_mid_transaction_cannot_leave_partial_sources) ... ok
+test_response_budget_returns_whole_prefix_without_removing_images (test_storage.StorageTests.test_response_budget_returns_whole_prefix_without_removing_images) ... ok
+test_sql_failure_rolls_back_raw_blob_fts_and_receipt (test_storage.StorageTests.test_sql_failure_rolls_back_raw_blob_fts_and_receipt) ... ok
+test_temporal_neighbours_use_source_time_for_backfilled_history (test_storage.StorageTests.test_temporal_neighbours_use_source_time_for_backfilled_history) ... ok
+test_validate_whole_batch_before_writing (test_storage.StorageTests.test_validate_whole_batch_before_writing) ... ok
+
+----------------------------------------------------------------------
+Ran 46 tests in 69.842s
+
+OK

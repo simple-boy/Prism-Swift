@@ -1,0 +1,25 @@
+flowchart LR
+  subgraph W["Synchronous Memory Writing"]
+    I["Text / Caption + Image + Source Time"] --> V["Contract / Receipt Check + Image Validation"]
+    V --> D["User-Scoped Binary Deduplication"]
+    D --> F["Text Tokens + Optional Cheap Visual Features"]
+  end
+  subgraph S["Persistent Evidence Store · SQLite WAL / FULL"]
+    B[("Original Text Templates & Binary Images")]
+    M[("Session / Source Time / Ordered Links")]
+    X[("FTS5 + Scoped BM25 Statistics + Image Features")]
+  end
+  F -->|"One Atomic Transaction"| B
+  F --> M
+  F --> X
+  B --> ACK["Durable Commit → Add 200"]
+  Q["Query + Optional Images / Options"] --> U["Query Analysis"]
+  U --> C["Text / Date / Appearance Candidates"]
+  X --> C
+  M --> C
+  C --> R["Scoped Ranking + Bounded Neighbours + Coverage"]
+  R --> VR["Optional TinyCLIP · Search Only"]
+  VR --> P["Whole-Source Evidence Budget"]
+  B --> P
+  P --> O["Ranked Original Text / Image Evidence"]
+  O --> E["Official Answer / Eval · External"]

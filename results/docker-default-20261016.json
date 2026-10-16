@@ -1,0 +1,110 @@
+{
+  "status": "failed",
+  "cloud_deployment": "not_run",
+  "official_smoke": "not_run",
+  "official_full": "not_run",
+  "model_calls": 0,
+  "synthetic_only": true,
+  "container": "swift-local-verification-ea8b13db9efc",
+  "volume": "swift-local-verification-ea8b13db9efc",
+  "image_tag": "prism-swift:local-test",
+  "base_image_override": null,
+  "package_index_override": null,
+  "source_sha256": {
+    "src/prism_swift/__init__.py": "ea9547fdfa2624544c01d58b41d6f003d8f69e52926819c23c3984b09d53faf1",
+    "src/prism_swift/api.py": "bdd7e4e1bb9bb3e85f85bd17bb4606c8d9c9a94e01fdb993faddd800ae42f2b0",
+    "src/prism_swift/config.py": "3a470d5040641a87f3d60172c84a5fff64b302bf024180dc885518cd554c0c74",
+    "src/prism_swift/retrieval.py": "de37514c0b3c1fe0432688beaa9c4bc01adac50a190bf826bb6f65e101651bd2",
+    "src/prism_swift/storage.py": "fe7bc1fc91ab63cbe2fcd5bca07f32c4769822960686670249ca651f3579aa22",
+    "src/prism_swift/validation.py": "fbf77a8f9d409c5a3eec8b97994814b70c5a60d535d97bddb81434ed7f06412e",
+    "src/prism_swift/visual_reranker.py": "638da37fb5567d36b21680899c03fe7a542ea2845228e725ba281a3e59e727bf"
+  },
+  "docker_version": "29.8.2",
+  "image_id": "sha256:46a8d90fa3092b726858e8cd566936d51310e945eddeaa288ff84fef40631963",
+  "health": {
+    "status": "ok",
+    "service": "prism-swift",
+    "version": "0.1.0",
+    "strategy": "adaptive",
+    "configuration_sha256": "2fabd825cd9f1a95f8601cd000206d2ee27e990566f7da91664357fff8d9d119",
+    "synchronous": 2,
+    "journal_mode": "wal",
+    "model_calls": 0,
+    "local_reranker": false,
+    "track": "multimodal",
+    "commit": "unfixed",
+    "source_sha256": "66621676be124f25752bbcf19685c20178a0f65ca3b68f3d74885b828a4e3ff7",
+    "submission_ready": false
+  },
+  "runtime_source_matches": true,
+  "application_uids": [
+    10001
+  ],
+  "write_and_immediate_read": {
+    "health": "passed",
+    "health_seconds": 0.00366,
+    "server_version": "0.1.0",
+    "server_commit": "unfixed",
+    "real_model_calls": 0,
+    "official_smoke": "not_run",
+    "official_full": "not_run",
+    "authentication": "passed",
+    "add": "passed",
+    "add_seconds": 0.206363,
+    "idempotency": "passed",
+    "changed_payload_conflict": "passed",
+    "search": "passed",
+    "search_seconds": 0.003671,
+    "original_image_and_order": "passed",
+    "stable_id": "passed",
+    "user_isolation": "passed"
+  },
+  "capacity": {
+    "requests": 8,
+    "concurrency": 2,
+    "successes": 8,
+    "errors": 0,
+    "add_p50_seconds": 0.34729582299999606,
+    "add_p95_seconds": 0.43748827099999943,
+    "workload": "64x64 synthetic PNG + text per Add; not a large-payload capacity benchmark"
+  },
+  "metrics_before_restart": {
+    "uptime_seconds": 2.533,
+    "completed": {
+      "search_401": 1,
+      "add_200": 10,
+      "add_409": 1,
+      "search_200": 11
+    },
+    "active": {
+      "add": 0,
+      "search": 0
+    },
+    "duration_ms_sum": {
+      "add": 2750.79,
+      "search": 18.244
+    },
+    "received_bytes": 9224,
+    "storage": {
+      "add_requests": 9,
+      "deduplicated_requests": 1,
+      "messages": 9,
+      "source_bytes": 4320,
+      "unique_blob_bytes": 1512,
+      "image_occurrences": 9,
+      "parse_seconds": 0.1279506779999906,
+      "commit_seconds": 1.455255502,
+      "lock_wait_seconds": 1.1507310330000067,
+      "local_rerank_calls": 0,
+      "local_rerank_seconds": 0.0,
+      "database_bytes": 844608,
+      "disk_free_bytes": 942899077120,
+      "model_calls": 0
+    }
+  },
+  "failure": {
+    "error_type": "RuntimeError",
+    "reason": "state_base_url_mismatch"
+  },
+  "retained_container_state": "stopped"
+}

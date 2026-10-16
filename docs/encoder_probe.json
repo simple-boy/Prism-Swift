@@ -1,0 +1,98 @@
+{
+  "kind": "optional_encoder_probe_not_aml_score",
+  "model": "wkcn/TinyCLIP-ViT-8M-16-Text-3M-YFCC15M",
+  "revision": "a2a8c6eaa2549ad66eb7c31b85022bf58273a26c",
+  "license": "MIT (model card)",
+  "academic_leaderboard_eligible": null,
+  "eligibility_note": "Non-standard embedding model: do not enable for Academic submission without organizer approval; Industrial comparison only.",
+  "source_url": "https://huggingface.co/wkcn/TinyCLIP-ViT-8M-16-Text-3M-YFCC15M/tree/a2a8c6eaa2549ad66eb7c31b85022bf58273a26c",
+  "real_inference_api_calls": 0,
+  "download": {
+    "downloaded_bytes": 0,
+    "download_seconds": 0
+  },
+  "python": "3.10.21",
+  "platform": "Windows-10-10.0.26100-SP0",
+  "torch": "2.7.1+cu128",
+  "transformers": "4.53.2",
+  "device": "cpu",
+  "torch_threads": 2,
+  "torch_interop_threads": 1,
+  "host_logical_cpus": 24,
+  "gpu_used": false,
+  "source_resolution": [
+    512,
+    512
+  ],
+  "processed_resolution": [
+    224,
+    224
+  ],
+  "model_parameters": 23446017,
+  "assets": {
+    "config.json": {
+      "bytes": 4602,
+      "sha256": "c586d856dbd5589b67525db9e791ee0917402405672c7773aead373efb7d7bca"
+    },
+    "preprocessor_config.json": {
+      "bytes": 316,
+      "sha256": "910e70b3956ac9879ebc90b22fb3bc8a75b6a0677814500101a4c072bd7857bd"
+    },
+    "tokenizer.json": {
+      "bytes": 2224041,
+      "sha256": "b556ac8c99757ffb677208af34bc8c6721572114111a6e0aaf5fa69ff0b8d842"
+    },
+    "model.safetensors": {
+      "bytes": 93812468,
+      "sha256": "9339ee3d736344d0ddcaa6c03edc9f89688f08caaea5401220885233da726fcc"
+    }
+  },
+  "model_load_seconds": 0.14344839996192604,
+  "dependency_import_seconds": 8.172399699920788,
+  "process_run_to_first_image_seconds": 8.464234699960798,
+  "first_image_preprocess_and_encode_seconds": 0.047503900015726686,
+  "warm_image_repeats": 3,
+  "warm_images_total": 54,
+  "warm_image_seconds_p50": 0.031023700023069978,
+  "warm_image_seconds_p95": 0.03275679994840175,
+  "warm_image_seconds_p99": 0.03365409991238266,
+  "warm_images_per_second": 32.41143411053495,
+  "text_encode_18_labels_seconds": 0.018771599978208542,
+  "observed_process_rss_bytes": 708886528,
+  "observed_peak_rss_bytes": 712093696,
+  "probe_process_cpu_seconds": 11.140625,
+  "probe_process_wall_seconds": 10.26796359999571,
+  "synthetic_shape_color_text_to_image": {
+    "queries": 18,
+    "recall_at_1": 1.0,
+    "recall_at_5": 1.0,
+    "mrr": 1.0,
+    "ranks": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ]
+  },
+  "limitations": [
+    "Synthetic shape/color diagnostic; no natural-image or official QA inference.",
+    "CPU thread count is 2 on a 24-logical-CPU Windows host, not the user's cloud VM.",
+    "No DB, HTTP request, durable commit, upload, queue, or Answer/Eval time included.",
+    "CPU set/processor contention not isolated; no deployment-memory guarantee.",
+    "All measured repeats are deterministic timing repeats, not independent accuracy seeds."
+  ]
+}

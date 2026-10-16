@@ -1,0 +1,6 @@
+ARG SWIFT_BASE=prism-swift:0.1.0
+FROM ${SWIFT_BASE}
+COPY requirements-visual.txt /app/requirements-visual.txt
+RUN pip install --no-cache-dir torch==2.7.1 --index-url https://download.pytorch.org/whl/cpu \
+    && pip install --no-cache-dir -r /app/requirements-visual.txt
+ENV VISUAL_RERANKER=tinyclip RERANKER_MODEL_PATH=/app/models/tinyclip RERANKER_THREADS=2 RERANKER_CANDIDATES=32

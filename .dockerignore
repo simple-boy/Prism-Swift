@@ -1,0 +1,12 @@
+**
+!Dockerfile
+!Dockerfile.visual
+!requirements.txt
+!requirements-visual.txt
+!requirements-runtime.lock
+!src/
+!src/**
+!scripts/
+!scripts/deploy.sh
+src/**/__pycache__/
+src/**/*.pyc

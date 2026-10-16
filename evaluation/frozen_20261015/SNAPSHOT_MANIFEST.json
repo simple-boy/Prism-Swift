@@ -1,0 +1,12 @@
+{
+  "captured_utc": "2026-10-15T15:58:37.479840+00:00",
+  "files_sha256": {
+    "evaluation/compare_visual_pipeline.py": "05cb12de60f39f5108832858dc85cf1a70545f52a54d0aa1af8c841cb534337f",
+    "src/chronicle_swift/api.py": "c91663ce2884affc9c890ca32e785c7c32196adda9ba6bb51112a8ca68b43c66",
+    "src/chronicle_swift/config.py": "0914af70c93c80af4023a8580389d4d0954d4c09a0c5e7e65df52763cc76c327",
+    "src/chronicle_swift/retrieval.py": "de37514c0b3c1fe0432688beaa9c4bc01adac50a190bf826bb6f65e101651bd2",
+    "src/chronicle_swift/storage.py": "09827e249850510505e81a02d6fc8ceace1fb2e99b1de2bb8437ea81574e52cf",
+    "src/chronicle_swift/validation.py": "fbf77a8f9d409c5a3eec8b97994814b70c5a60d535d97bddb81434ed7f06412e",
+    "src/chronicle_swift/__init__.py": "158f2ad7c81dce30fbff7b0af73d91daee6c4b45d9c40af73cf28021d8d6c277"
+  }
+}

@@ -1,2 +1,9 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+* text=auto eol=lf
+*.png binary
+*.zip binary
+evaluation/frozen_20261015/** -text
+evaluation/baselines/legacy_tracks/** -text
+results/*.json -text
+results/tests-release-20261016.txt -text
+docs/encoder_probe.json -text
+docs/visual_pipeline_comparison.json -text

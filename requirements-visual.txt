@@ -1,0 +1,4 @@
+# Install a CPU-only torch build separately; never install CUDA by accident.
+transformers==4.53.2
+safetensors==0.8.0
+tokenizers==0.21.2

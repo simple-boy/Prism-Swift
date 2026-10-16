@@ -1,0 +1,13 @@
+flowchart LR
+  AML["AML Platform"] -->|"HTTPS + Memory System Key"| TLS["Caddy · Optional Domain / TLS"]
+  AML -->|"Public IP :8003 when accepted"| API
+  TLS --> API["Prism-Swift · FastAPI · One Worker"]
+  API -->|"Add / Search · Token Auth"| STORE["Validation + Scoped Retrieval"]
+  STORE --> DB[("SQLite · WAL / FULL")]
+  STORE -.-> R["Optional Local TinyCLIP · Read-Only Model Files"]
+  DB --- VOL["Independent Persistent Volume"]
+  API --> HEALTH["GET /health"]
+  API --> METRICS["Authenticated /metrics"]
+  API --> LOG["Rotated Operational Logs · No Evidence / Keys"]
+  OPS["Operator"] -->|"Git Commit + Image + Env"| API
+  VOL --> BACKUP["Operator-Invoked Private Backup"]

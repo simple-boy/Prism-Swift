@@ -1,0 +1,53 @@
+{
+  "kind": "generated_large_scope_load_not_official_score",
+  "sources": 10000,
+  "image_occurrences": 2500,
+  "unique_blob_rows": 4,
+  "batch_messages": 100,
+  "add_requests": 100,
+  "add_seconds": 29.938479916000006,
+  "messages_per_second": 334.01829445107217,
+  "add_requests_per_second": 3.3401829445107216,
+  "add_batch_p50_seconds": 0.26608972299999323,
+  "search_p50_ms": 80.64969749999307,
+  "search_p95_ms": 110.4376259999924,
+  "rss_max_sampled_bytes": 37339136,
+  "os_write_bytes": 75366400,
+  "metrics": {
+    "add_requests": 100,
+    "deduplicated_requests": 0,
+    "messages": 10000,
+    "source_bytes": 786247050,
+    "unique_blob_bytes": 942621,
+    "image_occurrences": 2500,
+    "parse_seconds": 10.031031995999967,
+    "commit_seconds": 12.116511483999972,
+    "lock_wait_seconds": 0.00053666400003749,
+    "local_rerank_calls": 0,
+    "local_rerank_seconds": 0.0,
+    "database_bytes": 8826880,
+    "disk_free_bytes": 942880604160,
+    "model_calls": 0
+  },
+  "errors": 0,
+  "remote_model_calls": 0,
+  "gpu_used": false,
+  "cpu_affinity": [
+    0,
+    1
+  ],
+  "source_resolution": [
+    512,
+    512
+  ],
+  "limits": "Local ext4, 2 logical CPU affinity, no RAM quota; repeated images within one user. Direct Store, no HTTP/Answer/Eval. Not cloud capacity.",
+  "source_sha256": {
+    "src/prism_swift/api.py": "bdd7e4e1bb9bb3e85f85bd17bb4606c8d9c9a94e01fdb993faddd800ae42f2b0",
+    "src/prism_swift/config.py": "3a470d5040641a87f3d60172c84a5fff64b302bf024180dc885518cd554c0c74",
+    "src/prism_swift/retrieval.py": "de37514c0b3c1fe0432688beaa9c4bc01adac50a190bf826bb6f65e101651bd2",
+    "src/prism_swift/storage.py": "b8324c661908b24a9165dfbba3d1530cc8e369c217587d89f8c91f6d1e1b3ecf",
+    "src/prism_swift/validation.py": "fbf77a8f9d409c5a3eec8b97994814b70c5a60d535d97bddb81434ed7f06412e",
+    "src/prism_swift/visual_reranker.py": "638da37fb5567d36b21680899c03fe7a542ea2845228e725ba281a3e59e727bf",
+    "src/prism_swift/__init__.py": "ea9547fdfa2624544c01d58b41d6f003d8f69e52926819c23c3984b09d53faf1"
+  }
+}
